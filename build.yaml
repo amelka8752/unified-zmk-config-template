@@ -41,8 +41,8 @@
 
 include:
   - shield: kbd_left
-    board: nice_nano_v2
+    board: nice_nano
   - shield: kbd_center
-    board: nice_nano_v2
+    board: nice_nano
   - shield: kbd_right
-    board: nice_nano_v2
+    board: nice_nano

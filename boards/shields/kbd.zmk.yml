@@ -4,7 +4,7 @@ name: kbd
 type: shield
 url: https://github.com/amelka8752/zmk-kbd
 requires:
-  - nice_nano_v2
+  - nice_nano
 features:
   - keys
 siblings:

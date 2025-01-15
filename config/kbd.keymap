@@ -6,8 +6,6 @@
 
 #include "keycode_japanese.h"
 
-#define DEFAULT 0
-
 / {
         keymap {
                 compatible = "zmk,keymap";
