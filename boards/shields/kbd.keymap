@@ -1,0 +1,36 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
+
+#include "keycode_japanese.h"
+
+/ {
+        keymap {
+                compatible = "zmk,keymap";
+
+                default_layer {
+// |      | SW1  | SW6  | SW11 | SW16 | SW21 | SW26 | SW31 |   | SW1  | SW6  | SW11 | SW16 | SW21 | SW26 | SW31 | SW36 |   | SW1  | SW6  | SW11 |      |      |      |      |
+// | SW2  | SW7  | SW12 | SW17 | SW22 | SW27 | SW32 |      |   | SW2  | SW7  | SW12 | SW17 | SW22 | SW27 | SW32 | SW37 |   | SW2  | SW7  | SW12 | SW16 | SW21 | SW26 | SW31 |
+// | SW3  | SW8  | SW13 | SW18 | SW23 | SW28 | SW33 |      |   | SW3  | SW8  | SW13 | SW18 | SW23 | SW28 | SW33 |      |   | SW3  | SW8  | SW13 | SW17 | SW22 | SW27 | SW32 |
+// | SW4  | SW9  | SW14 | SW19 | SW24 | SW29 | SW34 |      |   | SW4  | SW9  | SW14 | SW19 | SW24 | SW29 | SW34 | SW39 |   |      |      |      | SW18 | SW23 | SW28 |      |
+// | SW5  | SW10 | SW15 | SW20 | SW25 | SW30 |      |      |   | SW10 |      | SW15 |      | SW25 | SW30 | SW35 | SW40 |   |      | SW9  |      | SW19 | SW24 | SW29 | SW34 |
+// |      |      |      |      |      |      | SW35 |      |   | SW5  |      |      |      |      |      |      |      |   | SW5  | SW10 | SW15 | SW20 |      | SW30 |      |
+// -----------------------------------------------------------------------------------------
+// |      |  ESC |  1   |  2   |  3   |  4   |  5   |  6   |   |  7   |  8   |  9   |  0   |  -=  |  ^~  |  \|  | BKSP |   | PTSC | SCLK | PAUS |      |      |      |      |
+// | MAC1 |  TAB |  Q   |  W   |  E   |  R   |  T   |      |   |  Y   |  U   |  I   |  O   |  P   |  @`  |  [{  | ENTR |   | INS  | HOME | PGUP | NMLK |  /   |  *   |  -   |
+// | MAC2 | CAPS |  A   |  S   |  D   |  F   |  G   |      |   |  H   |  J   |  K   |  L   |  ;+  |  :*  |  ]}  |      |   | DEL  | END  | PGDN |  7   |  8   |  9   |  +   |
+// | MAC3 | SHFT |  Z   |  X   |  C   |  V   |  B   |      |   |  N   |  M   |  ,<  |  .>  |  /?  |  \_  | RSFT |  FN  |   |      |      |      |  4   |  5   |  6   |      |
+// | MAC4 | CTRL |  Z   | GUI  | LWR  | SPC  |      |      |   | MMB  |      | SPC  |      | HEN  | ALT  | GUI  | CTRL |   |      |  UP  |      |  1   |  2   |  3   | ENTR |
+// |      |      |      |      |      |      | RMB  |      |   | LMB  |      |      |      |      |      |      |      |   | LEFT | DOWN | RIGH |  0   |      |  .   |      |
+                        bindings = <
+          &kp ESC &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6      &kp N7 &kp N8 &kp N9 &kp N0 &kp MINUS &kp Q &kp Q &kp BKSP   &none &none &none &none &none &none &none
+   &kp Q &kp TAB &kp Q &kp W  &kp E  &kp R  &kp T          &kp Y  &kp U  &kp I  &kp O  &kp P &kp Q &kp Q &kp ENTR             &none &none &none &none &none &none &none
+   &bt BT_SEL 0 &kp CAPS &kp A &kp S &kp D  &kp F  &kp G         &kp H  &kp J  &kp K  &kp L &kp Q &kp Q &kp Q              &none &none &none &none &none &none
+   &bt BT_SEL 1 &kp LSFT &kp Z &kp X  &kp C &kp V &kp B          &kp N &kp M &kp Q &kp Q &kp Q &kp Q &kp RSFT &none        &none       &none &none &none &none
+   &out OUT_TOG &kp LCTL &kp LGUI &kp ALT &kp SPACE    &mkp RCLK &mkp LCLK &mkp MCLK &kp SPC &kp Q &kp RALT &kp RGUI &kp RCTL           &none &none &none &none       &none
+                        >;
+                };
+        };
+};
