@@ -1,0 +1,13 @@
+file_format: "1"
+id: kbd
+name: kbd
+type: shield
+url: https://github.com/amelka8752/zmk-kbd
+requires:
+  - nice_nano_v2
+features:
+  - keys
+siblings:
+  - kbd_left
+  - kbd_center
+  - kbd_right

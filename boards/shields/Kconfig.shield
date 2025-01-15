@@ -1,0 +1,8 @@
+config SHIELD_KBD_LEFT
+    def_bool $(shields_list_contains,kbd_left)
+
+config SHIELD_KBD_CENTER
+    def_bool $(shields_list_contains,kbd_center)
+
+config SHIELD_KBD_RIGHT
+    def_bool $(shields_list_contains,kbd_right)

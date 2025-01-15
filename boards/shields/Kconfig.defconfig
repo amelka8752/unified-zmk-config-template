@@ -1,0 +1,16 @@
+if SHIELD_KBD_CENTER
+
+config ZMK_KEYBOARD_NAME
+    default "kbd"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif
+
+if SHIELD_KBD_LEFT || SHIELD_KBD_RIGHT || SHIELD_KBD_CENTER
+
+config ZMK_SPLIT
+    default y
+
+endif
